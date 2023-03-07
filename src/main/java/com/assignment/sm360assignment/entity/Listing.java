@@ -2,8 +2,9 @@ package com.assignment.sm360assignment.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -33,7 +34,8 @@ public class Listing {
     @Enumerated(EnumType.STRING)
     private EtatListing state;
 
-  /* @ManyToOne
-    @JoinColumn(name = "idDealer")
-    private Dealer dealer;*/
+    @ManyToOne
+    @JoinColumn(name = "dealer_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Dealer dealer;
 }
