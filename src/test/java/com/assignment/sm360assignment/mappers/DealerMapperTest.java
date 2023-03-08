@@ -18,4 +18,16 @@ public class DealerMapperTest {
         //THEN
         Assertions.assertEquals(dealer.getIdDealer(),dealerDto.getIdDealer());
     }
+
+    @Test
+    void given_dealerDto_id_should_map_dealer_id(){
+        //GIVEN
+        DealerDto dealerDto = DealerDto.builder().idDealer(1).build();
+
+        //WHEN
+        final Dealer dealer = DealerMapper.INSTANCE.dealerDtoToDealer(dealerDto);
+
+        //THEN
+        Assertions.assertEquals(dealer.getIdDealer(),dealerDto.getIdDealer());
+    }
 }
