@@ -15,8 +15,11 @@ public class Dealer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer IdDealer;
+    private int IdDealer;
 
     @Column(name = "name")
     private String name;
+
+    @Column(name = "limit")
+    private int limit;
 }
