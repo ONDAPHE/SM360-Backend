@@ -22,6 +22,6 @@ public class Dealer {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "limit")
-    private int limit;
+    @Column(name = "limit_p")
+    private int limit_p;
 }

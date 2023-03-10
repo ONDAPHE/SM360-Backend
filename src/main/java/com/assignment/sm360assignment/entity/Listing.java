@@ -1,6 +1,7 @@
 package com.assignment.sm360assignment.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.OnDelete;
@@ -8,27 +9,29 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 @Table(name = "listing")
 public class Listing {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer IdListing;
+    private int idListing;
 
     @Column(name = "vehicule")
     private String vehicule;
 
     @Column(name = "price")
-    private BigDecimal price;
+    private Double price;
 
     @Column(name = "createdAt")
-    private Date createdAt;
+    private LocalDateTime createdAt;
 
     @Column(name = "state")
     @Enumerated(EnumType.STRING)

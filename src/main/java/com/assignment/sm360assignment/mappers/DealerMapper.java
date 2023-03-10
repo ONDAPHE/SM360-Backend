@@ -14,12 +14,12 @@ public interface DealerMapper {
     @BeanMapping(ignoreByDefault  = true)
     @Mapping(source = "idDealer", target = "idDealer")
     @Mapping(source = "name", target = "name")
-    @Mapping(source = "limit", target = "limit")
+    @Mapping(source = "limit_p", target = "limit_p")
     DealerDto dealerToDealerDto(Dealer dealer);
 
     @BeanMapping(ignoreByDefault  = true)
     @Mapping(source = "idDealer", target = "idDealer")
     @Mapping(source = "name", target = "name")
-    @Mapping(source = "limit", target = "limit")
+    @Mapping(source = "limit_p", target = "limit_p")
     Dealer dealerDtoToDealer(DealerDto dealerDto);
 }

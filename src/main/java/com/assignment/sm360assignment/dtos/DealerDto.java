@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class DealerDto {
     private int idDealer;
     private String name;
-    private int limit;
+    private int limit_p;
 }
