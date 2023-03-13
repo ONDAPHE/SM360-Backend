@@ -1,6 +1,7 @@
 package com.assignment.sm360assignment.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,15 +12,16 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "dealer")
+@Builder
 public class Dealer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int IdDealer;
+    private int idDealer;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "limit")
-    private int limit;
+    @Column(name = "limit_p")
+    private int limit_p;
 }
