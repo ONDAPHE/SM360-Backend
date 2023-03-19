@@ -6,7 +6,7 @@ import com.assignment.sm360assignment.entity.Listing;
 import org.mapstruct.BeanMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.MappingTarget;
+
 import org.mapstruct.factory.Mappers;
 
 
